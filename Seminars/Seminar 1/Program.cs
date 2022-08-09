@@ -8,7 +8,7 @@ int quad = num * num;
 
 Console.WriteLine("Квадрат числа " + num + " это " + quad);
 
-Console.WriteLine($"Квадрат числа {num} это {quad}"); // 6 и 8 строка - одно и тоже
+Console.WriteLine($"Квадрат числа {num} это {quad}"); // 9 и 11 строка - одно и тоже
 */
 
 /*
