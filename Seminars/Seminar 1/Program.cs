@@ -71,4 +71,5 @@ int number = Convert.ToInt32(Console.ReadLine());
 int ed = number % 10;
 
 Console.WriteLine ($"Последняя цифра числа {number} это {ed}");
+
 */
