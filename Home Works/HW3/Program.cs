@@ -59,3 +59,28 @@ Console.WriteLine($"Расстояние между точками равно {Q
 
 */
 
+/*
+//Задача 23
+//Напишите программу, которая принимает на вход число (N) и выдаёт
+//таблицу кубов чисел от 1 до N.
+//3 -> 1, 8, 27
+//5 -> 1, 8, 27, 64, 125
+
+void СubeNumber (int number)
+{
+    int count = 1;
+    while (count <= number)
+    {
+        int num = count * count * count;
+        Console.WriteLine ($"Куб числа {count} = {num}");
+        count++;
+    }
+    
+}
+
+Console.Write ("Введите число: ");
+int number = Convert.ToInt32 (Console.ReadLine());
+
+СubeNumber(number);
+
+*/
