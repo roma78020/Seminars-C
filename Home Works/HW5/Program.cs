@@ -59,7 +59,7 @@ int FindSumOddNumbers (int[] array)
     int sum = 0;
     for (int i = 0; i < array.Length; i++)
     {
-        if (array[i] % 2 != 0)
+        if (i % 2 != 0)
         sum += array[i];
     }
     return sum;
@@ -74,6 +74,56 @@ int max = Convert.ToInt32 (Console.ReadLine());
 
 int[] myArray = CreateRandomArray (a, min, max);
 ShowArray(myArray);
-Console.WriteLine ($"Сумма нечетных чисел в массиве = {FindSumOddNumbers (myArray)}");
+Console.WriteLine ($"Сумма элементов, стоящих на нечётных позициях = {FindSumOddNumbers (myArray)}");
 
+*/
+
+/*
+//Задача 38: Задайте массив вещественных чисел.
+//Найдите разницу между максимальным и минимальным элементами массива.
+//[3 7 22 2 78] -> 76
+
+double [] RandomArrayDouble(int a, int minValue, int maxValue)
+{
+    double[] newArray = new double [a];
+
+    for (int i = 0; i < a; i++)
+        newArray[i] = new Random().Next(minValue,maxValue + 1);
+
+        return newArray;
+}
+
+void ShowArrayDouble(double[] array)
+{
+    for (int i = 0; i < array.Length; i++)
+        Console.Write(array[i] + " ");
+    
+    Console.WriteLine();
+}
+
+double DifferenceMaxMin (double[] array)
+{
+    double max = array[0];
+    double min = array[0];
+    
+    for (int i = 0; i < array.Length; i++)
+    {
+        if (array[i] > max) max = array[i];
+        if (array[i] <= min) min = array[i];
+    }
+    
+    double dif = max - min;
+    return dif;
+}
+
+Console.Write ("Введите длину массива: ");
+int a = Convert.ToInt32 (Console.ReadLine());
+Console.Write ("Введите минимальное число массива: ");
+int min = Convert.ToInt32 (Console.ReadLine());
+Console.Write ("Введите максимальное число массива: ");
+int max = Convert.ToInt32 (Console.ReadLine());
+
+double[] myArray = RandomArrayDouble (a, min, max);
+ShowArrayDouble(myArray);
+Console.WriteLine ($"Разница максимального и минимального чисел в массиве = {DifferenceMaxMin (myArray)}");
 */
