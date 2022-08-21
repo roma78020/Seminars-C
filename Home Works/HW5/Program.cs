@@ -47,3 +47,33 @@ ShowArray(myArray);
 Console.WriteLine ($"Количество четных чисел в массиве = {FindEvenNumbers (myArray)}");
 */
 
+/*
+//Задача 36: Задайте одномерный массив,
+//заполненный случайными числами.
+//Найдите сумму элементов, стоящих на нечётных позициях.
+//[3, 7, 23, 12] -> 19
+//[-4, -6, 89, 6] -> 0
+
+int FindSumOddNumbers (int[] array)
+{
+    int sum = 0;
+    for (int i = 0; i < array.Length; i++)
+    {
+        if (array[i] % 2 != 0)
+        sum += array[i];
+    }
+    return sum;
+}
+
+Console.Write ("Введите длину массива: ");
+int a = Convert.ToInt32 (Console.ReadLine());
+Console.Write ("Введите минимальное число массива: ");
+int min = Convert.ToInt32 (Console.ReadLine());
+Console.Write ("Введите максимальное число массива: ");
+int max = Convert.ToInt32 (Console.ReadLine());
+
+int[] myArray = CreateRandomArray (a, min, max);
+ShowArray(myArray);
+Console.WriteLine ($"Сумма нечетных чисел в массиве = {FindSumOddNumbers (myArray)}");
+
+*/
