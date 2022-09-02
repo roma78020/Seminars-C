@@ -96,6 +96,7 @@ MinRows(newArray);
 // 8 4 4 2
 
 /*
+
 int[,] CreateRandom2dArray(int rows, int columns, int minValue, int maxValue)
 {
     int[,] newArray = new int[rows, columns];
@@ -157,7 +158,7 @@ Show2dArray(newArray);
 
 */
 
-/*
+
 // Задача 58: Задайте две матрицы. Напишите программу,
 // которая будет находить произведение двух матриц.
 // Например, даны 2 матрицы:
@@ -167,7 +168,7 @@ Show2dArray(newArray);
 // 18 20
 // 15 18
 
-
+/*
 int[,] CreateRandom2dArray(int rows, int columns, int minValue, int maxValue)
 {
     int[,] newArray = new int[rows, columns];
@@ -239,4 +240,77 @@ else Console.WriteLine("Матрицы перемножить нельзя");
 
 */
 
+// Задача 60. ...Сформируйте трёхмерный массив
+// из неповторяющихся двузначных чисел.
+// Напишите программу, которая будет построчно
+// выводить массив, добавляя индексы каждого элемента.
+// Массив размером 2 x 2 x 2
+// 66(0,0,0) 25(0,1,0)
+// 34(1,0,0) 41(1,1,0)
+// 27(0,0,1) 90(0,1,1)
+// 26(1,0,1) 55(1,1,1)
 
+
+int[,,] CreateRandom3dArray(int rows, int columns, int depth, int minValue, int maxValue)
+{
+    int[,,] newArray = new int[rows, columns, depth];
+    
+    for (int i = 0; i < rows; i++)
+        for (int j = 0; j < columns; j++)
+            for (int k = 0; k < depth; k++)
+            {
+                newArray[i,j,k] = new Random().Next(minValue, maxValue + 1);
+                
+            }            
+
+    return newArray;
+}
+
+// int[,,] Proverka (int[,,] array)
+// {
+//     int temp=array[0,0,0];
+//     for (int i = 0; i < array.GetLength(0); i++)
+//     {
+//         for (int j = 0; j < array.GetLength(1) j++)
+//         {
+//             for (int k = 0; k < array.GetLength(2); k++)
+//             {                
+//                 if (array[i,j,k]==temp)
+//                 {
+//                     array[i,j,k]= new Random().Next(10,99);
+//                 }
+//             }
+//         }
+//     }
+// }
+
+void Show3dArray(int[,,] array)
+{
+    for (int k = 0; k < array.GetLength(2); k++)
+    {
+        for (int i = 0; i < array.GetLength(0); i++)
+        {
+            for (int j = 0; j < array.GetLength(1); j++)
+            {
+                Console.Write(array[i, j, k] + $"{(i,j,k)}" + " ");
+            }
+            Console.WriteLine();
+        }
+        
+    }
+}
+
+
+
+Console.Write("Введите количество строк: ");
+int x = Convert.ToInt32(Console.ReadLine());
+Console.Write("Введите количество столбцов: ");
+int y = Convert.ToInt32(Console.ReadLine());
+Console.Write("Введите глубину массива: ");
+int z = Convert.ToInt32(Console.ReadLine());
+
+int min = 10;
+int max = 99;
+
+int[,,] myArray = CreateRandom3dArray(x, y, z, min, max);
+Show3dArray(myArray);
