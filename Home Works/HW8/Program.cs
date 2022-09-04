@@ -250,7 +250,7 @@ else Console.WriteLine("Матрицы перемножить нельзя");
 // 27(0,0,1) 90(0,1,1)
 // 26(1,0,1) 55(1,1,1)
 
-
+/*
 int[,,] CreateRandom3dArray(int rows, int columns, int depth, int minValue, int maxValue)
 {
     int[,,] newArray = new int[rows, columns, depth];
@@ -259,30 +259,31 @@ int[,,] CreateRandom3dArray(int rows, int columns, int depth, int minValue, int 
         for (int j = 0; j < columns; j++)
             for (int k = 0; k < depth; k++)
             {
-                newArray[i,j,k] = new Random().Next(minValue, maxValue + 1);
+                int currentNumber = newArray[i, j, k];                
+                
+                    for (int a = 0; a < rows; a++)
+                        for (int b = 0; b < columns; b++)
+                            for (int c = 0; c < depth; c++)
+                            {
+                                while(currentNumber == newArray[a, b, c])
+                                    {
+                                        currentNumber = new Random().Next(minValue, maxValue + 1);
+                                        a = 0;
+                                        b = 0;
+                                        c = 0;
+                                        
+                                    }
+                            }                                         
+                                        
+                
+                newArray[i, j, k] = currentNumber;
                 
             }            
 
     return newArray;
 }
 
-// int[,,] Proverka (int[,,] array)
-// {
-//     int temp=array[0,0,0];
-//     for (int i = 0; i < array.GetLength(0); i++)
-//     {
-//         for (int j = 0; j < array.GetLength(1) j++)
-//         {
-//             for (int k = 0; k < array.GetLength(2); k++)
-//             {                
-//                 if (array[i,j,k]==temp)
-//                 {
-//                     array[i,j,k]= new Random().Next(10,99);
-//                 }
-//             }
-//         }
-//     }
-// }
+
 
 void Show3dArray(int[,,] array)
 {
@@ -314,3 +315,7 @@ int max = 99;
 
 int[,,] myArray = CreateRandom3dArray(x, y, z, min, max);
 Show3dArray(myArray);
+Console.WriteLine();
+
+*/
+
