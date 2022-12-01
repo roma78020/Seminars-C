@@ -21,7 +21,7 @@ img {
 }
 
 header {
-    margin-bottom: 117px;
+    margin-bottom: 84px;
 }
 
 h1 {
@@ -30,14 +30,49 @@ h1 {
 
 .paragraph {
     margin-bottom: 37px;
+    position: absolute;
+    width: 466px;
+    height: 48px;
+    font-family: 'Gilroy-Medium';
+    font-size: 20px;
+    line-height: 23px;
+    color: #888888;
     
 }
 
-button {
-    margin-bottom: 178px;    
+.navigation {
+    display: flex;
+    align-content: center;
+    gap: 40px;
+    justify-content: flex-end;
+    
 }
 
-brand {
-    margin-top: 197px;
-    position: absolute;   
+.home a {
+    color: black;
+}
+
+.home {
+    color: #F25822;
+}
+
+.section{
+    display: flex;
+   
+}
+
+.h1 {
+    position: absolute;
+    width: 522px;
+    height: 222px;
+    font-family: 'Gilroy-Bold';
+    font-size: 60px;
+    line-height: 70px;
+    color: #000000;
+}
+
+
+.but {
+    display: flex;
+    gap: 72px;
 }
