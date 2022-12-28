@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <script>
+      //Создать переменные num1, num2 которые пользователь вводит с клавиатуры
+      //Проверьте, что переменная num1 равна или меньше 1,
+      //а переменная num2 больше или равна 3.
+
+      console.log("Задание 1:");
+      let num1 = prompt("Введите первое число");
+      let num2 = prompt("Введите второе число");
+      if (num1 === "") {
+        console.log("Пустая строка");
+        alert("Вы не ввели 1ое число! Обновите страницу и попробуйте снова");
+      } else if (num1 <= 1) {
+        if (num1 == 1) {
+          console.log(`Число ${num1} равно 1`);
+          alert(`Число ${num1} равно 1`);
+        } else {
+          console.log(`Число ${num1} меньше 1`);
+          alert(`Число ${num1} меньше 1`);
+        }
+      } else {
+        console.log(`Число ${num1} больше 1`);
+        alert(`Число ${num1} больше 1`);
+      }
+
+      if (num2 === "") {
+        console.log("Пустая строка");
+        alert("Вы не ввели 2ое число! Обновите страницу и попробуйте снова");
+      } else if (num2 >= 3) {
+        if (num2 == 3) {
+          console.log(`Число ${num2} равно 3`);
+          alert(`Число ${num2} равно 3`);
+        } else {
+          console.log(`Число ${num2} больше 3`);
+          alert(`Число ${num2} больше 3`);
+        }
+      } else {
+        console.log(`Число ${num2} меньше 3`);
+        alert(`Число ${num2} меньше 3`);
+      }
+      //Перепишите код к тернарному оператору
+      //   (условие) ? да : нет;
+      //       let test = true;
+      // if (test === true) {
+      // console.log('+++');
+      // } else {
+      // console.log('---');
+      // }
+      console.log("");
+      console.log("Задание 2:");
+      let test = true;
+      test === true ? console.log("+++") : console.log("---");
+
+      console.log("");
+      console.log("Задание 3:");
+      //В переменной day лежит какое-то число из интервала от 1 до 31. Определите
+      //в какую декаду месяца попадает это число (в первую, вторую или третью).
+
+      let day = prompt("Введите число от 1 до 30");
+      if (day == "")
+        alert("Вы не ввели число! Обновите страницу и попробуйте снова");
+      if (day >= 1 && day <= 10)
+        alert(`${day} день паподает в первую декаду месяца!`);
+      if (day >= 11 && day <= 20)
+        alert(`${day} день паподает во вторую декаду месяца!`);
+      if (day >= 21 && day <= 30)
+        alert(`${day} день паподает в третью декаду месяца!`);
+      if (day < 1 || day > 30)
+        alert(`${day} день не паподает в какую-либо декаду месяца!`);
+      console.log(day);
+
+      console.log("");
+      console.log("Задание 4:");
+
+      let number = prompt("Введите любое положительное число");
+      userNumber = number;
+      let hundreds = 0;
+      let dec = 0;
+      let units = 0;
+
+      if (number < 1 || number == 0) alert(`Число ${number} некорректно!`);
+
+      while (number >= 1000) number = parseInt(number % 1000);
+      if (number > 99) {
+        hundreds = number / 100;
+        dec = (number % 100) / 10;
+        units = number % 10;
+      } else if (number > 9) {
+        dec = number / 10;
+        units = number % 10;
+      } else {
+        units = number % 10;
+      }
+      alert(
+        `В числе ${userNumber} количество сотен: ${parseInt(
+          hundreds
+        )}, десятков: ${parseInt(dec)}, единиц: ${parseInt(units)}`
+      );
+    </script>
+  </body>
+</html>
